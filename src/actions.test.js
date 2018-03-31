@@ -2,9 +2,8 @@ import * as actions from './actions'
 import * as types from './constants'
 import configureMockStore from 'redux-mock-store'
 import thunkMiddleware from 'redux-thunk'
-import thunk from "redux-thunk";
 
-export const mockStore = configureMockStore([thunk]);
+export const mockStore = configureMockStore([thunkMiddleware]);
 
 describe('actions', () => {
   it('should create an action to search', () => {
@@ -18,7 +17,7 @@ describe('actions', () => {
 })
 
 describe("Fetch robots action PENDING", () => {
-  it("handles changing a purchase status and fetches all purchases", () => {
+  it("should creat a Pending action on request Robots", () => {
     const store = mockStore();
     store.dispatch(actions.requestRobots())
     const action = store.getActions();

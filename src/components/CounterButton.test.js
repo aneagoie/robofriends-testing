@@ -10,8 +10,8 @@ it('correnctly increments the counter', () => {
   const wrapper = shallow(<CounterButton/>)
   expect(wrapper).toMatchSnapshot();
   wrapper.find('[id="counter"]').simulate('click');
-  expect((wrapper.state())).toEqual({count: 2})
+  expect((wrapper.state())).toEqual({count: 1})
   wrapper.find('[id="counter"]').simulate('click');
   wrapper.find('[id="counter"]').simulate('click');
-  expect((wrapper.state())).toEqual({count: 4})
+  expect((wrapper.state())).toEqual({count: 3})
 });

@@ -19,7 +19,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         "Count: ",
-        1,
+        0,
       ],
       "color": undefined,
       "id": "counter",
@@ -28,7 +28,7 @@ ShallowWrapper {
     "ref": null,
     "rendered": Array [
       "Count: ",
-      1,
+      0,
     ],
     "type": "button",
   },
@@ -40,7 +40,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           "Count: ",
-          1,
+          0,
         ],
         "color": undefined,
         "id": "counter",
@@ -49,7 +49,7 @@ ShallowWrapper {
       "ref": null,
       "rendered": Array [
         "Count: ",
-        1,
+        0,
       ],
       "type": "button",
     },
@@ -83,7 +83,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         "Count: ",
-        1,
+        0,
       ],
       "color": undefined,
       "id": "counter",
@@ -92,7 +92,7 @@ ShallowWrapper {
     "ref": null,
     "rendered": Array [
       "Count: ",
-      1,
+      0,
     ],
     "type": "button",
   },
@@ -104,7 +104,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           "Count: ",
-          1,
+          0,
         ],
         "color": undefined,
         "id": "counter",
@@ -113,7 +113,7 @@ ShallowWrapper {
       "ref": null,
       "rendered": Array [
         "Count: ",
-        1,
+        0,
       ],
       "type": "button",
     },
