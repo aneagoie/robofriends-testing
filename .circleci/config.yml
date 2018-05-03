@@ -17,6 +17,9 @@ jobs:
       - run: npm install
       - run: npm test
   hithere:
+    docker:
+      - image: circleci/node:8.9
+    steps:
       - checkout
       - run: echo "hellllooooo!"
 workflows:
@@ -26,6 +29,6 @@ workflows:
       - build
       - hithere
       - test:
-        requires:
-          - hithere
+          requires:
+            - hithere
 
