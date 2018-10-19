@@ -8,7 +8,7 @@ jobs:
       - run: echo "A first hello"
   sally:
     docker:
-      -image: circleci/ruby:2.4.1
+      - image: circleci/ruby:2.4.1
     steps:
       - checkout
       - run: echo "Double trouble"
