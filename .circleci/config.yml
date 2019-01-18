@@ -16,9 +16,9 @@ jobs:
       - run: echo "testing stuff"
       - run: npm install
       - run: npm test
-    hithere:
-      docker:
-        - image: circleci/node:8.9
+  hithere:
+    docker:
+      - image: circleci/node:8.9
     steps:
       - checkout
       - run: echo 'hello'
