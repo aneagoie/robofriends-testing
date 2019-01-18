@@ -21,7 +21,7 @@ jobs:
       - image: circleci/node:8.9
     steps:
       - checkout
-      - run: echo "hellllooooo!"
+      - run: echo 'hello'
 workflows:
   version: 2
   build_test_and_lint:
@@ -31,4 +31,3 @@ workflows:
       - test:
           requires:
             - hithere
-
