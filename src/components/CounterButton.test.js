@@ -6,7 +6,7 @@ it('renders without crashing', () => {
   expect(shallow(<CounterButton />)).toMatchSnapshot();
 });
 
-it('correctly increments the counter', () => {
+it('it correctly increments the counter', () => {
   const wrapper = shallow(<CounterButton/>)
   expect(wrapper).toMatchSnapshot();
   wrapper.find('[id="counter"]').simulate('click');
