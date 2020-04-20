@@ -1,27 +1,27 @@
-version: 2
+version: 2.1
 jobs:
   build:
-    docker:
-      - image: circleci/node:8.9
+    docker: 
+      - image: circleci/node:12.16 # the primary container, where your job's commands are run
     steps:
-      - checkout
-      - run: echo "npm installing"
+      - checkout # check out the code in the project directory
+      - run: echo "npm installing" # run the `echo` command
       - run: npm install
       - run: CI=true npm run build
   test:
-    docker:
-      - image: circleci/node:8.9
+    docker: 
+      - image: circleci/node:12.16 # the primary container, where your job's commands are run
     steps:
-      - checkout
-      - run: echo "testing stuff"
+      - checkout # check out the code in the project directory
+      - run: echo "testing stuff" # run the `echo` command
       - run: npm install
       - run: npm test
   hithere:
-    docker:
-      - image: circleci/node:8.9
+    docker: 
+      - image: circleci/node:12.16 # the primary container, where your job's commands are run
     steps:
       - checkout
-      - run: echo "hellllooooo!"
+      - run: echo "Hellooooo!!!!"
 workflows:
   version: 2
   build_test_and_lint:
@@ -31,4 +31,3 @@ workflows:
       - test:
           requires:
             - hithere
-
