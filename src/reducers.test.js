@@ -29,14 +29,14 @@ describe('searchRobots reducer', () => {
 
 const initialStateRobots = {
   robots: [],
-  isPending: true
+  isPending: false
 }
 describe('requestRobots reducer', () => {
   it('should return the initial state', () => {
     expect(reducers.requestRobots(undefined, {})).toEqual(
       {
         robots: [],
-        isPending: true
+        isPending: false
       }
     )
   })
@@ -85,7 +85,7 @@ describe('requestRobots reducer', () => {
       {
         error: 'NOOO',
         robots: [],
-        isPending: true
+        isPending: false
       }
     )
   })
