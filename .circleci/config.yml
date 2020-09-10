@@ -22,13 +22,13 @@ jobs:
     steps:
       - checkout
       - run: echo "hellllooooo!"
-workflows:
-  version: 2
-  build_test_and_lint:
-    jobs:
-      - build
-      - hithere
-      - test:
-          requires:
-            - hithere
+  workflows:
+    version: 2
+    build_test_and_lint:
+      jobs:
+        - build
+        - hithere
+        - test:
+            requires:
+              - hithere
 
