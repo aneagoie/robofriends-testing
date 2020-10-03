@@ -4,21 +4,21 @@
   "private": true,
   "homepage": "https://aneagoie.github.io/robofriends-pwa",
   "dependencies": {
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "fetch-mock": "^6.3.0",
-    "gh-pages": "^1.1.0",
-    "nock": "^9.2.5",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-redux": "^5.0.7",
-    "react-scripts": "1.0.17",
-    "react-test-renderer": "^16.3.2",
-    "redux": "^3.7.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "fetch-mock": "^9.10.7",
+    "gh-pages": "^3.1.0",
+    "nock": "^13.0.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "react-scripts": "^3.4.3",
+    "react-test-renderer": "^16.13.1",
+    "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
-    "redux-mock-store": "^1.5.1",
-    "redux-thunk": "^2.2.0",
-    "tachyons": "^4.9.1"
+    "redux-mock-store": "^1.5.4",
+    "redux-thunk": "^2.3.0",
+    "tachyons": "^4.12.0"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -27,5 +27,17 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
