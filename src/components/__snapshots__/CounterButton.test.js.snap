@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`correnctly increments the counter 1`] = `ShallowWrapper {}`;
+exports[`correnctly increments the counter 1`] = `
+<button
+  id="counter"
+  onClick={[Function]}
+>
+  Count: 
+  0
+</button>
+`;
 
-exports[`renders without crashing 1`] = `ShallowWrapper {}`;
+exports[`renders without crashing 1`] = `
+<button
+  id="counter"
+  onClick={[Function]}
+>
+  Count: 
+  0
+</button>
+`;
