@@ -1,0 +1,34 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+    - image: cimg/node:14.10.1
+    steps:
+      - checkout
+      - run: echo "Building Scripts"
+      - run: npm i
+      - run: CI=true npm run build
+  test:
+    docker:
+    - image: cimg/node:14.10.1
+    steps:
+      - checkout
+      - run: echo "Running Tests"
+      - run: npm i
+      - run: npm run test
+  hi:
+    docker:
+    - image: cimg/node:14.10.1
+    steps:
+    - checkout
+    - run: echo "helllooooo!!"
+      
+workflows:
+  version: 2
+  build_test_and_lint:
+    jobs:
+     - build
+     - hi
+     - test:
+        requires:
+          - hi
