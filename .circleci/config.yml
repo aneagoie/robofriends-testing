@@ -28,7 +28,7 @@ workflows:
   build_test_and_lint:
     jobs:
      - build
-     - hithere
+     - hi
      - test:
         requires:
           - hi
