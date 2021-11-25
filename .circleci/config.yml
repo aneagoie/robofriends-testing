@@ -1,0 +1,14 @@
+version: 2.1
+jobs:
+  test1:
+    docker:
+    - image: cimg/node:14.10.1
+    steps:
+      - checkout
+      - run: echo "New first test"
+  
+workflows:
+  version: 2
+  test_jobs:
+    jobs:
+     - test1
