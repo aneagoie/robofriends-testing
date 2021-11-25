@@ -1,14 +1,34 @@
 version: 2.1
 jobs:
-  test1:
+  build:
     docker:
     - image: cimg/node:14.10.1
     steps:
       - checkout
-      - run: echo "New first test"
-  
+      - run: echo "Building Scripts"
+      - run: npm i
+      - run: CI=true npm run build
+  test:
+    docker:
+    - image: cimg/node:14.10.1
+    steps:
+      - checkout
+      - run: echo "Running Tests"
+      - run: npm i
+      - run: npm run test
+  hithere:
+    docker:
+    - image: cimg/node:14.10.1
+    steps:
+    - checkout
+    - run: echo "helllooooo!!"
+      
 workflows:
   version: 2
-  test_jobs:
+  build_test_and_lint:
     jobs:
-     - test1
+     - build
+     - hithere
+     - test:
+        requires:
+          - hithere
