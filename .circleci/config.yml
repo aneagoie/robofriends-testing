@@ -16,7 +16,7 @@ jobs:
       - run: echo "Running Tests"
       - run: npm i
       - run: npm run test
-  hithere:
+  hi:
     docker:
     - image: cimg/node:14.10.1
     steps:
@@ -31,4 +31,4 @@ workflows:
      - hithere
      - test:
         requires:
-          - hithere
+          - hi
