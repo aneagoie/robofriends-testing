@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:16.13.2
+      - image: cimg/node:16.13.2
     steps:
       - checkout # check out the code in the project directory
       - run: echo "npm installing..." # run the `echo` command
@@ -10,7 +10,7 @@ jobs:
       - run: CI=true npm run build
   test:
     docker:
-      - image: circleci/node:16.13.2
+      - image: cimg/node:16.13.2
     steps:
       - checkout # check out the code in the project directory
       - run: echo "testing..." # run the `echo` command
@@ -18,7 +18,7 @@ jobs:
       - run: npm test
   hithere:
     docker:
-      - image: circleci/node:16.13.2
+      - image: cimg/node:16.13.2
     steps:
       - checkout # check out the code in the project directory
       - run: echo "helllllllo!" # run the `echo` command
