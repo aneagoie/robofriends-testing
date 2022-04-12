@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  bobby:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout # check out the code in the project directory
+      - run: echo "hello world" # run the `echo` command
+  sally:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout # check out the code in the project directory
+      - run: echo "Wow thats great!" # run the `echo` command
+workflows:
+  version: 2
+  bobby_sally:
+    jobs:
+      - bobby
+      - sally
