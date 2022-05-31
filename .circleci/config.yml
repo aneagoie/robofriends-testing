@@ -22,12 +22,12 @@ jobs: # define jobs: What you want their servers to do
     steps: # what to do
       - checkout # check out the code in the project directory
       - run: echo "Double trouble" # run the `echo` command
-  workflows:
-    # what version we want to use the workflows for
-    version: 2
-    # naming workflow
-    bobby_sally:
-      jobs: # jobs to accomplish
-        - bobby
-        - sally
+workflows:
+  # what version we want to use the workflows for
+  version: 2
+  # naming workflow
+  bobby_sally:
+    jobs: # jobs to accomplish
+      - bobby
+      - sally
 
