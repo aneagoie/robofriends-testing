@@ -21,10 +21,10 @@ jobs:
       - image: circleci/node:8.9
     steps:
       - checkout
-      - run: echo "hellooooo";
+      - run: echo "hellooooo"
 workflows:
   version: 2
-  bobby_sally:
+  build_test_and_lint:
     jobs:
       - build
       - hithere
