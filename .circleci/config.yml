@@ -13,8 +13,8 @@ jobs:
       - checkout
       - run: echo "Double trouble"
   workflows:
-  version: 2
-  bobby_sally:
-    jobs:
-      - bobby
-      - sally
+    version: 2
+    bobby_sally:
+      jobs:
+        - bobby
+        - sally
