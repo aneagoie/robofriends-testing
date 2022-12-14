@@ -21,7 +21,8 @@
     "redux-logger": "^3.0.6",
     "redux-mock-store": "^1.5.4",
     "redux-thunk": "^2.4.0",
-    "tachyons": "^4.12.0"
+    "tachyons": "^4.12.0",
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -44,7 +45,6 @@
     ]
   },
   "devDependencies": {
-    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.7",
-    "react-scripts": "^5.0.1"
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.7"
   }
 }
