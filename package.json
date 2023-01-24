@@ -13,15 +13,15 @@
     "enzyme-to-json": "^3.6.2",
     "fetch-mock": "^9.11.0",
     "gh-pages": "^4.0.0",
-    "nock": "^13.1.4",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-redux": "^7.2.6",
+    "nock": "^13.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
     "react-scripts": "^5.0.1",
-    "redux": "^4.1.1",
+    "redux": "^4.2.0",
     "redux-logger": "^3.0.6",
     "redux-mock-store": "^1.5.4",
-    "redux-thunk": "^2.4.0",
+    "redux-thunk": "^2.4.2",
     "tachyons": "^4.12.0"
   },
   "scripts": {
@@ -45,6 +45,6 @@
     ]
   },
   "devDependencies": {
-    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.7"
+    "@cfaester/enzyme-adapter-react-18": "^0.6.0"
   }
 }
