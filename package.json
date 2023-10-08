@@ -24,17 +24,6 @@
     "redux-thunk": "^2.4.2",
     "tachyons": "^4.12.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,json,css,scss,md}": [
-      "npm run prettier",
-      "git add"
-    ]
-  },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
@@ -42,9 +31,13 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint-staged": "lint-staged",
-    "prettier": "prettier --write .",
-    "precommit": "pretty-quick --staged"
+    "lint": "prettier --check .",
+    "format": "prettier --write ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn format"
+    }
   },
   "browserslist": {
     "production": [
@@ -62,7 +55,7 @@
     "@cfaester/enzyme-adapter-react-18": "^0.7.1",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
-    "prettier": "^3.0.3",
+    "prettier": "3.0.3",
     "pretty-quick": "^3.1.3"
   }
 }
