@@ -1,43 +1,39 @@
 version: 2
 jobs:
-  my_job:
+  add_pass:
+    steps:
+      - checkout
+      - run: Mm@009698951168
+
+  build:
     docker:
       - image: circleci/node:14
     steps:
       - checkout
-      - run: Mm@009698951
+      - run: echo "npm installing"
+      - run: npm install
+      - run: CI=true npm run build
+
+  test:
+    docker:
+      - image: circleci/node:14
+    steps:
+      - checkout
+      - run: echo "run testing"
+      - run: npm install
+      - run: npm test
+  hithere:
+    docker:
+      image: circleci/node:14
+    steps:
+      - checkout
+      - run: echo "hellooo"
 workflows:
   version: 2
-  jobs:
-    build:
-      docker:
-        - image: circleci/node:14
-      steps:
-        - checkout
-        - run: echo "npm installing"
-        - run: npm install
-        - run: CI=true npm run build
-
-    test:
-      docker:
-        - image: circleci/node:14
-      steps:
-        - checkout
-        - run: echo "run testing"
-        - run: npm install
-        - run: npm test
-    hithere:
-      docker:
-        image: circleci/node:14
-      steps:
-        - checkout
-        - run: echo "hellooo"
-  workflows:
-    version: 2
-    build_test_and_lint:
-      jobs:
-        - build
-        - hithere
-        - test:
-            requires:
-              - hithere
+  build_test_and_lint:
+    jobs:
+      - build
+      - hithere
+      - test:
+          requires:
+            - hithere
