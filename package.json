@@ -34,7 +34,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged npx prettier . --write"
+      "pre-commit": "pretty-quick --staged"
     }
   },
   "browserslist": {
