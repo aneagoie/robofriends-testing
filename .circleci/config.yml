@@ -1,78 +1,43 @@
 version: 2
 jobs:
-  build:
+  my_job:
     docker:
       - image: circleci/node:14
     steps:
       - checkout
-      - run: echo "npm installing"
-      - run: npm install
-      - run: CI=true npm run build
-
-  test:
-    docker:
-      - image: circleci/node:14
-    steps:
-      - checkout
-      - run: echo "run testing"
-      - run: npm install
-      - run: npm test
-
-  hithere:
-    docker:
-      image: circleci/node:14
-    steps:
-      - checkout
-      - run: echo "hellooo"
-
+      - run: Mm@009698951
 workflows:
   version: 2
-  build_test_and_lint:
-    jobs:
-      - build
-      - hithere
-      - test:
-          requires:
-            - hithere
+  jobs:
+    build:
+      docker:
+        - image: circleci/node:14
+      steps:
+        - checkout
+        - run: echo "npm installing"
+        - run: npm install
+        - run: CI=true npm run build
 
-  my_workflow:
-    jobs:
-      - my_job:
-          environment:
-            MY_PASSWORD: Mm@009698951
-
-
-# version: 2
-# jobs:
-#   build:
-#     docker:
-#       - image: circleci/node:14
-#     steps:
-#       - checkout
-#       - run: echo "npm installing"
-#       - run: npm install
-#       - run: CI=true npm run build
-
-#   test:
-#     docker:
-#       - image: circleci/node:14
-#     steps:
-#       - checkout
-#       - run: echo "run testing"
-#       - run: npm install
-#       - run: npm test
-#   hithere:
-#     docker:
-#       image: circleci/node:14
-#     steps:
-#       - checkout
-#       - run: echo "hellooo"
-# workflows:
-#   version: 2
-#   build_test_and_lint:
-#     jobs:
-#       - build
-#       - hithere
-#       - test:
-#           requires:
-#             - hithere
+    test:
+      docker:
+        - image: circleci/node:14
+      steps:
+        - checkout
+        - run: echo "run testing"
+        - run: npm install
+        - run: npm test
+    hithere:
+      docker:
+        image: circleci/node:14
+      steps:
+        - checkout
+        - run: echo "hellooo"
+  workflows:
+    version: 2
+    build_test_and_lint:
+      jobs:
+        - build
+        - hithere
+        - test:
+            requires:
+              - hithere
