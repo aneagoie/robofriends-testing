@@ -1,10 +1,4 @@
 version: 2
-jobs:
-  add_pass:
-    steps:
-      - checkout
-      - run: Mm@009698951168
-
   build:
     docker:
       - image: circleci/node:14
