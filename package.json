@@ -30,8 +30,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "precommit": "npx prettier . --write"
+    "eject": "react-scripts eject"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged npx prettier . --write"
+    }
   },
   "browserslist": {
     "production": [
@@ -47,6 +51,8 @@
   },
   "devDependencies": {
     "@cfaester/enzyme-adapter-react-18": "^0.7.1",
-    "prettier": "3.0.3"
+    "husky": "^8.0.3",
+    "prettier": "^3.0.3",
+    "pretty-quick": "^3.1.3"
   }
 }
