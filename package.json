@@ -30,7 +30,14 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "prettier --check .",
+    "format": "prettier --write ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn format"
+    }
   },
   "browserslist": {
     "production": [
@@ -45,6 +52,10 @@
     ]
   },
   "devDependencies": {
-    "@cfaester/enzyme-adapter-react-18": "^0.7.1"
+    "@cfaester/enzyme-adapter-react-18": "^0.7.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "prettier": "3.0.3",
+    "pretty-quick": "^3.1.3"
   }
 }

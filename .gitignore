@@ -21,5 +21,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/.circleci
+yarn.lock
 
+
+    // "lint-staged": "lint-staged",
+    // "prettier": "prettier --write ."
