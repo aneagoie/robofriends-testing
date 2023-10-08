@@ -1,5 +1,4 @@
 version: 2
-jobs:
   build:
     docker:
       - image: circleci/node:14
@@ -26,6 +25,7 @@ workflows:
   version: 2
   build_test_and_lint:
     jobs:
+      - add_pass
       - build
       - hithere
       - test:
