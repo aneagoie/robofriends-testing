@@ -8,10 +8,6 @@ jobs:
       - run: echo "npm installing"
       - run: npm install
       - run: CI=true npm run build
-      - run:
-          name: Clear Cache
-          command: |
-            rm -rf $HOME/.cache
   test:
     docker:
       - image: circleci/node:14
