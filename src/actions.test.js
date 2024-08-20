@@ -1,9 +1,9 @@
 import * as actions from './actions'
 import * as types from './constants'
 import configureMockStore from 'redux-mock-store'
-import thunkMiddleware from 'redux-thunk'
+import { thunk } from 'redux-thunk'
 
-export const mockStore = configureMockStore([thunkMiddleware]);
+export const mockStore = configureMockStore([thunk]);
 
 describe('actions', () => {
   it('should create an action to search', () => {
