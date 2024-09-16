@@ -20,13 +20,6 @@ it('renders without crashing', () => {
 });
 
 it('fileters Robots', () => {
-  const mockProps = {
-    onRequestRobots: jest.fn(),
-    robots: [],
-    searchField: 'a',
-    isPending: false
-  }
-  wrapper = shallow(<MainPage {...mockProps}/>)
   expect(wrapper.instance().filterRobots()).toEqual([]);
 });
 
