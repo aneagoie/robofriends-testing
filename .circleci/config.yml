@@ -5,13 +5,19 @@ jobs:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
-      -run: echo "A first hello"
+      - run:  # Corrected spacing
+          name: Say Hello
+          command: echo "A first hello"
+          
   sally:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
-      - run: echo "Double trouble"
+      - run:  # Corrected spacing
+          name: Double Trouble
+          command: echo "Double trouble"
+          
 workflows:
   version: 2
   bobby_sally:
