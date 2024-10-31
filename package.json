@@ -2,7 +2,7 @@
   "name": "robofriends",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://aneagoie.github.io/robofriends-pwa",
+  "homepage": "https://ChristopherJamesL.github.io/robofriends-testing",
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
