@@ -11,7 +11,7 @@ jobs:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
-      -run: echo "Double trouble"
+      - run: echo "Double trouble"
 workflows:
   version: 2
   bobby_sally:
