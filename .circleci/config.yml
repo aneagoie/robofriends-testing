@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   bobby:
     docker:
-      - image: circleci/ruby:2.4.1
+      - image: circleci/node:8.9
     steps:
       - checkout
       - run:  # Corrected spacing
@@ -11,7 +11,7 @@ jobs:
           
   sally:
     docker:
-      - image: circleci/ruby:2.4.1
+      - image: circleci/node:8.9
     steps:
       - checkout
       - run:  # Corrected spacing
