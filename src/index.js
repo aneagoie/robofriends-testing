@@ -1,5 +1,6 @@
 import React from 'react';
 // import ReactDOM from 'react-dom'; The new way to import createRoot:
+
 import { createRoot } from "react-dom/client";
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
